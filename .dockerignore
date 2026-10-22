@@ -1,0 +1,5 @@
+.git
+.trae
+__pycache__
+*.pyc
+data.db
