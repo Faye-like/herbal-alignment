@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>年轻人健康数据地图 · 养生科普智能匹配系统</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+    <div class="row-between">
+      <div>
+        <div class="section-title">年轻人健康数据地图</div>
+        <p class="section-sub">当代年轻人在不同养生困扰上的区域分布</p>
+      </div>
+      <button class="btn gray sm" id="refreshBtn">刷新数据</button>
+    </div>
+
+    <div class="stat-cards mb24" id="statCards"></div>
+
+    <div class="grid grid-2">
+      <div class="chart-box" style="grid-column:1/-1">
+        <div class="row-between">
+          <h3>全国年轻人养生困扰区域分布</h3>
+          <select id="mapConcern" class="sm-select"></select>
+        </div>
+        <div id="cMap" class="chart" style="height:520px"></div>
+        <div class="muted mt8" id="mapLegend" style="font-size:12px"></div>
+      </div>
+
+      <div class="chart-box"><h3>年轻人高频养生困扰分布</h3><div id="cConcerns" class="chart"></div></div>
+      <div class="chart-box"><h3>本平台实时采集 · 各困扰人次</h3><div id="cLive" class="chart"></div></div>
+      <div class="chart-box" style="grid-column:1/-1"><h3>各区域关注点总量（全部省份）</h3><div id="cProvinces" class="chart"></div></div>
+      <div class="chart-box" style="grid-column:1/-1"><h3>各困扰的高发区域 TOP5（全国调研基线 · 每万人关注度指数）</h3><div id="cConcernTop"></div></div>
+    </div>
+
+    <div class="src-line" id="srcLine"></div>
+  </div>
+</div>
+<div id="footerSlot"></div>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/insights.js"></script>
+</body>
+</html>

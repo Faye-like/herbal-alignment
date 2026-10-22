@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 本地数据库（Render 上通过 DATABASE_PATH 环境变量指定 /tmp，不提交 data.db）
+data.db
+
+# Node
+node_modules/
+package-lock.json
+
+# 系统 / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 临时构建产物（PPT、截图、背景裁剪脚本）
+_deck_build/
+_deck_assets/
+_deck_*.py
+*.png
+*.jpg
+*.pptx
+
+# TRAE 迁移标记
+TRAE_PROJECT_MOVED_*.md
+.trae/

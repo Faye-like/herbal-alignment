@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登录 / 注册 · 养生科普智能匹配系统</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+    <div class="login-wrap" style="min-height:auto;padding:0">
+      <div class="login-card">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">登录</button>
+          <button class="auth-tab" data-tab="register">注册</button>
+        </div>
+
+        <!-- 登录 -->
+        <div id="loginPane">
+          <div class="form-group"><label>用户名</label>
+            <input type="text" id="lgUsername" placeholder="请输入用户名" autocomplete="username"></div>
+          <div class="form-group"><label>密码</label>
+            <input type="password" id="lgPassword" placeholder="请输入密码" autocomplete="current-password"></div>
+          <button class="btn" id="loginBtn" style="width:100%;padding:12px">登 录</button>
+        </div>
+
+        <!-- 注册 -->
+        <div id="regPane" style="display:none">
+          <div class="form-group"><label>用户名 <span class="hint">至少 3 个字符</span></label>
+            <input type="text" id="rgUsername" placeholder="用于登录的账号" autocomplete="username"></div>
+          <div class="form-group"><label>密码 <span class="hint">至少 6 位</span></label>
+            <input type="password" id="rgPassword" placeholder="设置登录密码" autocomplete="new-password"></div>
+          <div class="form-group"><label>性别</label>
+            <select id="rgGender"></select></div>
+          <div class="form-group"><label>所在省份 <span class="hint">用于健康数据地图统计</span></label>
+            <select id="rgProvince"></select></div>
+          <button class="btn" id="regBtn" style="width:100%;padding:12px">注册并登录</button>
+        </div>
+
+        <p class="text-center mt16"><a href="/" class="muted" style="font-size:13px">← 返回首页</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footerSlot"></div>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/user_login.js"></script>
+</body>
+</html>

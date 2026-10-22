@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>药材塑自查 · 养生科普智能匹配系统</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+
+<div class="quiz-page">
+  <div class="quiz-container">
+    <div class="quiz-head">
+      <div class="quiz-kicker">身心自查</div>
+      <h1 class="quiz-title">你是哪种「药材塑」？</h1>
+      <p class="quiz-sub">躯体状态 + 思虑习惯 + 行为偏好，测出你的草本养生人格</p>
+    </div>
+
+    <div class="quiz-progress">
+      <div class="quiz-progress-bar" id="progressBar"></div>
+      <div class="quiz-progress-text" id="progressText"></div>
+    </div>
+
+    <div id="quizStage">
+      <div class="quiz-card"><div class="quiz-question">加载中…</div></div>
+    </div>
+
+    <div class="quiz-actions" id="quizActions">
+      <button class="btn ghost" id="prevBtn" disabled>上一步</button>
+      <button class="btn" id="nextBtn" disabled>下一步</button>
+    </div>
+
+    <div class="quiz-foot-note">问卷结果仅作日常养生与思虑习惯参考，不构成医疗或心理诊断</div>
+  </div>
+</div>
+
+<div id="footerSlot"></div>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/quiz.js"></script>
+</body>
+</html>

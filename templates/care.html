@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>病症调理方案 · 养生科普智能匹配系统</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+    <div class="section-title">病症调理方案</div>
+    <p class="section-sub">先选择你想调理的病症，下方按「饮食调理 / 作息调理 / 运动调理 / 情绪调理 / 日常护理」分类给出有科学依据的具体做法。内容整理自权威机构公开发布的指南与科普口径，仅供参考。</p>
+
+    <div class="card card-pad mb16">
+      <label style="font-weight:600;font-size:14px">① 选择你想调理的病症</label>
+      <div id="concernNav" class="options mt8"></div>
+    </div>
+
+    <div id="tipBanner" class="mb16" style="display:none"></div>
+
+    <div class="section-title" id="planTitle" style="display:none">② 对应的调理方式</div>
+    <div id="planList" class="mt16"></div>
+    <p id="planNote" class="note-line" style="display:none">以下调理方式按类别整理自权威机构公开指南与科普口径，具体方案请结合自身情况并遵医嘱。</p>
+
+    <div id="suppRefWrap" style="display:none" class="mt32">
+      <div class="section-title">④ 对应补剂参考</div>
+      <p class="section-sub">不同困扰 / 主题可参考的常见补剂，均标注「使用人群 / 作用 / 过量风险 / 食补优先」。</p>
+      <div id="suppRefList" class="mt16"></div>
+      <p class="note-line">补剂不能替代医院检查与医嘱。以下补剂仅供参考；是否需要补充、补充多少应先改善饮食结构，再由医生或营养师评估。出现持续症状请先到医院检查。</p>
+    </div>
+  </div>
+</div>
+<div id="footerSlot"></div>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/care.js"></script>
+</body>
+</html>

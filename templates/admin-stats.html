@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据统计看板 · 管理后台</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+    <div class="section-title">数据统计看板</div>
+    <p class="section-sub">关注点采集与科普资源的聚合统计与效果评估</p>
+
+    <div class="stat-cards mb24" id="statCards"></div>
+
+    <div class="grid grid-2">
+      <div class="chart-box"><h3>年轻人高频养生关注点 TOP5</h3><div id="cConcerns" class="chart"></div></div>
+      <div class="chart-box"><h3>关注点采集量趋势</h3><div id="cByDate" class="chart"></div></div>
+      <div class="chart-box"><h3>科普资源分类浏览量</h3><div id="cTypeViews" class="chart"></div></div>
+      <div class="chart-box"><h3>用户反馈类型占比</h3><div id="cFeedback" class="chart"></div></div>
+      <div class="chart-box" style="grid-column:1/-1"><h3>科普资源浏览量 TOP5</h3><div id="cTopViewed" class="chart"></div></div>
+
+      <div class="chart-box" style="grid-column:1/-1"><h3>不同躯体困扰人群中「高思虑内耗」占比</h3><div id="cMindBody" class="chart"></div></div>
+      <div class="chart-box"><h3>草本人格 × 思虑倾向分布</h3><div id="cHerbMind" class="chart"></div></div>
+      <div class="chart-box"><h3>高思虑人群的补剂偏好</h3><div id="cMindSupp" class="chart"></div></div>
+    </div>
+
+    <div class="table-wrap mt24">
+      <h3 style="padding:16px 16px 0">用户意见反馈</h3>
+      <div id="sugList"></div>
+    </div>
+  </div>
+</div>
+<div id="footerSlot"></div>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/admin_stats.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>打卡与查询 · 养生科普智能匹配系统</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+
+    <div class="row-between wrap">
+      <div>
+        <div class="section-title">打卡与查询</div>
+        <p class="section-sub">按你的关注点生成每日 / 每周计划（食谱 · 运动 · 补剂），照着计划打卡；需要了解原理时可翻阅《青年养生知识手册》</p>
+      </div>
+    </div>
+
+    <div id="herbBanner" class="herb-banner mb16" style="display:none"></div>
+
+    <div id="mainBox">
+
+      <div class="card card-pad mb16" id="concernCard">
+        <label class="concern-label">我的养生关注点</label>
+        <div id="concernTags" class="tags mt12"></div>
+        <div id="concernEdit" class="concern-edit" style="display:none">
+          <div id="concernPicker" class="options"></div>
+          <button class="btn mt16" id="saveBtn">保存并生成计划</button>
+        </div>
+        <div class="concern-entry" id="reportEntry" style="display:none">
+          <a class="report-link" href="/report">查看我的自查报告 →</a>
+        </div>
+        <div class="concern-entry" id="quizEntry" style="display:none">
+          <a class="report-link" href="/quiz">想要更详细贴合自身的计划，填写身心自查问卷 →</a>
+        </div>
+      </div>
+
+      <div id="secCheckin" style="display:none">
+        <div class="checkin-card mb16">
+          <div class="ck-stat">
+            <div class="ck-num"><span id="ckStreak">0</span><small>天</small></div>
+            <div class="ck-label">连续打卡</div>
+          </div>
+          <div class="ck-stat">
+            <div class="ck-num"><span id="ckTotal">0</span><small>天</small></div>
+            <div class="ck-label">累计打卡</div>
+          </div>
+          <div class="ck-right">
+            <button class="btn" id="ckBtn">今日打卡</button>
+            <div class="muted mt8" style="font-size:12px" id="ckHint"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="secTasks" style="display:none">
+        <div class="section-title">打卡任务 · <span id="taskDayLabel"></span></div>
+        <p class="section-sub" id="taskHint"></p>
+        <div class="card card-pad mb16">
+          <div class="row-between mb16">
+            <b style="font-size:14px">当日完成进度</b>
+            <span class="muted" style="font-size:13px" id="taskProgress"></span>
+          </div>
+          <div id="taskList" class="task-list"></div>
+        </div>
+      </div>
+
+      <div id="secDaily" style="display:none">
+        <div class="section-title">每天坚持的事</div>
+        <p class="section-sub">以下内容与星期无关、每天都适用，并已结合你的自查报告结果，所以不重复写进每日计划</p>
+        <div id="exerciseBox" class="mb16"></div>
+      </div>
+
+      <div id="secWeek" style="display:none">
+        <div class="section-title">一周食谱</div>
+        <p class="section-sub">点选任意星期，即可查看那天的打卡任务；只有当天可以打卡</p>
+        <div class="card card-pad mb16">
+          <div class="week-menu" id="weekTable"></div>
+        </div>
+      </div>
+
+      <div id="secFoods" style="display:none">
+        <div class="section-title">饮食调理重点</div>
+        <p class="section-sub">结合你的自查报告与所选关注点给出饮食方向，仅作参考，不构成医疗建议</p>
+        <div id="foodsBox" class="mb16"></div>
+      </div>
+
+      <div id="secSupps" style="display:none">
+        <div class="section-title">补剂参考</div>
+        <p class="section-sub">先列明你报告中正在服用的补剂，再给出客观参考；补剂不能替代医院检查与医嘱，优先食补</p>
+        <div id="suppBox" class="mb16"></div>
+      </div>
+
+      <div id="secGuide" style="display:none">
+        <div class="section-title">知识查阅指引</div>
+        <p class="section-sub">以下仅为知识查阅指引，不推荐任何食材、补剂或产品；是否调整由你自己判断。</p>
+        <div id="guideList" class="guide-list mb24"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="footerSlot"></div>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/mine.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>个人中心 · 养生科普智能匹配系统</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+    <div class="section-title">个人中心</div>
+    <p class="section-sub">查看并修改你的个人信息，也可以向平台提交意见反馈</p>
+
+    <div id="guard" class="card card-pad text-center mb24" style="display:none">
+      <div class="empty">请先登录后再查看个人中心</div>
+      <a class="btn mt8" href="/user-login?redirect=%2Fprofile">去登录 →</a>
+    </div>
+
+    <div id="mainBox" style="display:none">
+      <div class="profile-layout">
+        <aside class="profile-side">
+          <a class="side-item active" data-sec="basic">基本信息</a>
+          <a class="side-item" data-sec="feedback">意见反馈</a>
+        </aside>
+
+        <section class="profile-content">
+          <!-- 基本信息 -->
+          <div id="secBasic">
+            <div class="card card-pad">
+              <h3>基本信息</h3>
+              <p class="muted mt8" style="font-size:13px">用户名用于登录，性别 / 省份会展示在你的养生方案中。</p>
+              <div class="form-group mt16"><label>用户名</label>
+                <input type="text" id="pfUsername" disabled></div>
+              <div class="form-group"><label>性别</label>
+                <select id="pfGender"></select></div>
+              <div class="form-group"><label>所在省份 <span class="hint">用于健康数据地图统计</span></label>
+                <select id="pfProvince"></select></div>
+              <button class="btn mt8" id="saveProfile">保存修改</button>
+            </div>
+
+            <div class="card card-pad mt24">
+              <div class="row-between">
+                <h3>我的活动</h3>
+                <a class="btn gray sm" href="/mine">查看我的养生方案 →</a>
+              </div>
+              <div class="profile-stats mt16">
+                <div class="ck-stat">
+                  <div class="ck-num"><span id="stConcerns">0</span><small>项</small></div>
+                  <div class="ck-label">我的养生关注点</div>
+                </div>
+                <div class="ck-stat">
+                  <div class="ck-num"><span id="stStreak">0</span><small>天</small></div>
+                  <div class="ck-label">连续打卡</div>
+                </div>
+                <div class="ck-stat">
+                  <div class="ck-num"><span id="stTotal">0</span><small>天</small></div>
+                  <div class="ck-label">累计打卡</div>
+                </div>
+              </div>
+              <div id="myConcerns" class="tags mt16"></div>
+            </div>
+          </div>
+
+          <!-- 意见反馈 -->
+          <div id="secFeedback" style="display:none">
+            <div class="card card-pad">
+              <h3>意见反馈</h3>
+              <p class="muted mt8" style="font-size:13px">你的反馈会提交给平台管理员，帮助我们改进科普内容与使用体验。</p>
+              <div class="form-group mt16"><label>反馈类型</label>
+                <select id="fbCategory"></select></div>
+              <div class="form-group"><label>反馈内容 <span class="hint">至少 5 个字</span></label>
+                <textarea id="fbContent" style="min-height:130px" placeholder="请描述你遇到的问题或建议…"></textarea></div>
+              <button class="btn mt8" id="submitFb">提交反馈</button>
+              <div class="muted mt8" id="fbHint" style="font-size:12px"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footerSlot"></div>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/profile.js"></script>
+</body>
+</html>

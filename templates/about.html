@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>项目介绍 · 养生科普智能匹配系统</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+    <div class="section-title">项目介绍</div>
+    <p class="section-sub">年轻人养生现状 × 科普资源基层治理</p>
+
+    <div class="card card-pad mb24">
+      <h3>一、我们解决什么问题</h3>
+      <p class="mt8">当下年轻人「养生意识觉醒」却「养生信息混乱」：一边熬夜一边保温杯泡枸杞，
+         一边跟风网络偏方一边被「酸碱体质」「排毒养颜」等谣言误导。权威、通俗、可执行的健康科普，
+         与年轻人的实际困扰之间缺少精准的匹配通道。</p>
+      <p class="mt8">本项目通过<strong>一键点选养生关注点 → 标签规则匹配 → 个性化推荐科普资源与病症调理方案</strong>，
+         把优质科普资源与有科学依据的调理方式精准送到年轻人手里，同时为基层健康管理员提供资源管理与数据统计看板，
+         让科普资源在基层「看得见、用得上、可评估」。</p>
+    </div>
+
+    <div class="card card-pad mb24">
+      <h3>二、核心机制：标签匹配</h3>
+      <p class="mt8">每条科普资源都被打上多维度标签：<strong>主题标签、适配困扰类型</strong>。
+         用户在前台一键点选养生关注点后，系统解析出用户的标签集合，并按标签重合度排序推荐：</p>
+      <ul class="mt8" style="list-style:disc;padding-left:22px">
+        <li>资源得分 = 适配困扰命中（高权重）+ 主题标签重合；</li>
+        <li>示例：用户点选「睡眠差、焦虑」→ 优先推荐带「睡眠、作息、情绪」标签的科普文章。</li>
+      </ul>
+      <p class="mt8">病症调理模块则按「饮食 / 作息 / 运动 / 情绪 / 日常护理」分类，给出整理自权威机构
+         公开指南的具体做法与参考依据。</p>
+    </div>
+
+    <div class="card card-pad mb24">
+      <h3>三、系统构成</h3>
+      <div class="steps mt16">
+        <div class="step"><div class="num">A</div><h3>用户前台</h3>
+          <p class="muted mt8">面向年轻人的落地页（一键点选关注点）、《青年养生知识手册》、病症调理、健康数据、打卡与查阅（含每日 / 每周计划与打卡）</p></div>
+        <div class="step"><div class="num">B</div><h3>管理后台</h3>
+          <p class="muted mt8">科普资源管理、数据统计看板</p></div>
+        <div class="step"><div class="num">C</div><h3>后端服务</h3>
+          <p class="muted mt8">RESTful API、标签匹配算法、SQLite 数据存储</p></div>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <h3>四、技术栈</h3>
+      <p class="mt8 muted">前端：原生 HTML + CSS + JavaScript（多页面）；后端：Python Flask + SQLite；
+         图表：ECharts。整体轻量、免安装数据库服务，便于比赛演示与打包部署。</p>
+      <div class="mt16">
+        <a class="btn" href="/">去首页点选我的养生困扰 →</a>
+        <a class="btn gray" href="/login">进入管理后台</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footerSlot"></div>
+<script src="/static/js/common.js"></script>
+<script>injectNav('/about', false); injectFooter();</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>科普资源管理 · 管理后台</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div id="navSlot"></div>
+<div class="page">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
+      <div>
+        <div class="section-title">科普资源管理</div>
+        <p class="section-sub">新增 / 编辑 / 删除科普资源，并为资源打上多维度标签</p>
+      </div>
+      <button class="btn" id="btnAdd">+ 新增科普资源</button>
+    </div>
+
+    <div class="filter-bar">
+      <div class="fi"><label>分类</label><select id="fType"></select></div>
+      <div class="fi grow"><label>关键词</label><input type="text" id="fQ" placeholder="按标题搜索"></div>
+      <div class="fi"><label>&nbsp;</label><button class="btn gray" id="btnFilter">筛选</button></div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th style="width:52px">ID</th><th>标题</th><th>分类</th><th>主题标签</th>
+          <th>适配困扰</th><th>发布时间</th><th>浏览</th><th style="width:130px">操作</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask" id="editMask">
+  <div class="modal">
+    <div class="modal-head"><h3 id="modalTitle">新增科普资源</h3><span class="x" id="editX">×</span></div>
+    <div class="modal-body">
+      <div class="form-group"><label>标题</label><input type="text" id="edTitle" placeholder="资源标题"></div>
+      <div class="form-group"><label>分类</label><select id="edType"></select></div>
+      <div class="form-group"><label>主题标签 <span class="hint">可多选</span></label><div id="edThemes"></div></div>
+      <div class="form-group"><label>适配困扰类型 <span class="hint">可多选</span></label><div id="edConcerns"></div></div>
+      <div class="form-group"><label>发布时间</label><input type="date" id="edTime"></div>
+      <div class="form-group"><label>封面图地址 <span class="hint">可留空</span></label><input type="text" id="edCover" placeholder="https://..."></div>
+      <div class="form-group"><label>正文内容 <span class="hint">支持 HTML 标签</span></label>
+        <textarea id="edContent" style="min-height:140px" placeholder="&lt;p&gt;正文段落&lt;/p&gt;"></textarea></div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn gray" id="editCancel">取消</button>
+      <button class="btn" id="editSave">保存</button>
+    </div>
+  </div>
+</div>
+
+<div id="footerSlot"></div>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/admin_resources.js"></script>
+</body>
+</html>
